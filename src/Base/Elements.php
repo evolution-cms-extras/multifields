@@ -30,7 +30,7 @@ class Elements
     public function getLexicon()
     {
         if (empty($this->lexicon) && basename(dirname(static::class)) == basename(static::class)) {
-            $path = dirname(dirname(__DIR__)) . '/' . strtolower(dirname(str_replace('\\', '/', static::class))) . '/lang/';
+            $path = dirname(dirname(__DIR__)) . 'Elements.php/' . strtolower(dirname(str_replace('\\', '/', static::class))) . '/lang/';
             if (is_file($path . evolutionCMS()->getConfig('manager_language') . '.php')) {
                 $this->lexicon = require_once $path . evolutionCMS()->getConfig('manager_language') . '.php';
             } elseif (is_file($path . 'english.php')) {
@@ -117,9 +117,9 @@ class Elements
         if (empty($this->template)) {
             if (empty($this->tpl)) {
                 $name = str_replace('\\', '/', static::class);
-                $this->template = $this->tpl = dirname(dirname(__DIR__)) . '/' . strtolower(dirname($name) . '/' . basename($name)) . '.tpl';
+                $this->template = $this->tpl = dirname(dirname(__DIR__)) . 'Elements.php/' . strtolower(dirname($name) . '/' . basename($name)) . '.tpl';
             } else {
-                $this->template = dirname(dirname(__DIR__)) . '/' . strtolower(dirname(str_replace('\\', '/', static::class))) . '/' . trim($this->tpl, '/');
+                $this->template = dirname(dirname(__DIR__)) . '/' . trim($this->tpl, '/');
             }
 
             if (is_file($this->template)) {
