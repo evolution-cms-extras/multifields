@@ -5,10 +5,10 @@
  * Creating custom fields for documents
  *
  * @category    plugin
- * @version     1.3
+ * @version     2.0
  * @package     evo
- * @internal    @properties &multifields_theme=Default theme used;text;default &multifields_storage=Data storage;list;files,database;files
- * @internal    @events OnManagerPreFrameLoader,OnDocFormPrerender,OnDocFormSave,OnDocFormDelete
+ * @internal    @properties &multifields_storage=Data storage;list;default,files,database;default &multifields_debug=Plugin debug;list;no,yes;no
+ * @internal    @events OnAfterLoadDocumentObject,OnWebPageInit,OnBeforeManagerPageInit,OnManagerMainFrameHeaderHTMLBlock,OnDocFormDelete,OnDocFormSave
  * @internal    @modx_category Manager and Admin
  * @internal    @installset base,sample
  * @author      64j
