@@ -16,9 +16,15 @@
 
 //@TODO в гетинстанс прокинуть параметры
 
+if(!function_exists('mfc')){
+    function mfc($params = []) {
+        return \Multifields\Base\Core::getInstance($params);
+    }
+}
+
 Event::listen('evolution.OnManagerMainFrameHeaderHTMLBlock', function ($params) {
     if (in_array(evo()->manager->action, [3, 4, 17, 27, 72, 112])) {
-        return \Multifields\Base\Core::getInstance()->getStartScripts();
+        return mfc()->getStartScripts();
     }
 });
 
@@ -49,10 +55,10 @@ Event::listen('evolution.OnManagerMainFrameHeaderHTMLBlock', function ($params) 
 });
 
 Event::listen('evolution.OnDocFormSave', function ($params) {
-    \Multifields\Base\Core::getInstance()->saveData();
+    mfc()->saveData();
 });
 
 Event::listen('evolution.OnDocFormDelete', function ($params) {
-    \Multifields\Base\Core::getInstance()->deleteData();
+    mfc()->deleteData();
 });
 
