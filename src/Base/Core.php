@@ -96,7 +96,7 @@ class Core
 
         $styles = [
             '@' => [
-                $this->setFileUrl('view/css/core.css', dirname(__DIR__) . '/elements/multifields/', false, true)
+                $this->setFileUrl('view/css/core.css', dirname(__DIR__) . '/Elements/multifields/', false, true)
             ]
         ];
 
@@ -104,8 +104,8 @@ class Core
 
         $scripts = [
             '@' => [
-                $this->setFileUrl('view/js/Sortable.min.js', dirname(__DIR__) . '/elements/multifields/'),
-                $this->setFileUrl('view/js/core.js', dirname(__DIR__) . '/elements/multifields/', false, true)
+                $this->setFileUrl('view/js/Sortable.min.js', dirname(__DIR__) . '/Elements/multifields/'),
+                $this->setFileUrl('view/js/core.js', dirname(__DIR__) . '/Elements/multifields/', false, true)
             ]
         ];
 
