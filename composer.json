@@ -11,7 +11,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "EvolutionCMS\\Multifields\\MultifieldsServiceProvider"
+        "Multifields\\MultifieldsServiceProvider"
       ],
       "files": [
         {

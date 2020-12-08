@@ -1,4 +1,4 @@
-<?php namespace EvolutionCMS\Multifields;
+<?php namespace Multifields;
 
 use EvolutionCMS\ServiceProvider;
 use Event;
