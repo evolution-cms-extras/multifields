@@ -17,6 +17,8 @@ return [
     'cards_list' => 'Cards list',
     'image' => 'Image',
     'richtext_block' => 'Text editor',
+    'iframe_block' => 'Iframe',
+    'iframe_url' => 'Embed URL',
     'faq_block' => 'Questions and answers',
     'faq_list' => 'Questions and answers list',
     'question' => 'Question',

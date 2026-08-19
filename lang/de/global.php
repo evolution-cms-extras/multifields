@@ -17,6 +17,8 @@ return [
     'cards_list' => 'Kartenliste',
     'image' => 'Bild',
     'richtext_block' => 'Texteditor',
+    'iframe_block' => 'Iframe',
+    'iframe_url' => 'URL zum Einbetten',
     'faq_block' => 'Fragen und Antworten',
     'faq_list' => 'Liste der Fragen und Antworten',
     'question' => 'Frage',

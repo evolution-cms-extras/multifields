@@ -17,6 +17,8 @@ return [
     'cards_list' => 'Список карток',
     'image' => 'Зображення',
     'richtext_block' => 'Текстовий редактор',
+    'iframe_block' => 'Iframe',
+    'iframe_url' => 'Посилання для вбудовування',
     'faq_block' => 'Питання та відповіді',
     'faq_list' => 'Список питань і відповідей',
     'question' => 'Питання',

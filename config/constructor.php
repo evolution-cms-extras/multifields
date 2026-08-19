@@ -34,6 +34,7 @@ if (in_array($currentTemplateId, [1], true)) {
 $config['templates'] = array_merge(
     $config['templates'],
     include $path . 'richtext.php',
+    include $path . 'iframe.php',
     include $path . 'cards.php',
     include $path . 'logos.php',
     include $path . 'faq.php',
