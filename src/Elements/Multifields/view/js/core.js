@@ -29,9 +29,21 @@
                 Multifields.build();
               }
             });
-            [...document.querySelectorAll('.multifields [name]')].map(function(el) {
+            const disabledFields = [...form.querySelectorAll('.multifields [name]')].filter(function(el) {
+              return !el.disabled;
+            });
+            disabledFields.forEach(function(el) {
               el.disabled = true;
             });
+            // Exclude individual fields from the payload, then unlock forms that stay open.
+            const restoreFields = function() {
+              disabledFields.forEach(function(el) {
+                el.disabled = false;
+              });
+              form.removeEventListener('formdata', restoreFields);
+            };
+            form.addEventListener('formdata', restoreFields, {once: true});
+            setTimeout(restoreFields, 0);
           });
         }
 
